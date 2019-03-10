@@ -3,7 +3,7 @@ var config = {
   secret: 'the quick brown fox jumps over the lazy dog'
 }
 
-config.callCalculateHours = (numberOfHours) => {
+config.calculateHours = (numberOfHours) => {
    return 1000 * 60 * 60 * numberOfHours
 }
 
