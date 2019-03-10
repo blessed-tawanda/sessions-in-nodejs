@@ -8,11 +8,11 @@ app = express()
 app.use(bodyParser.urlencoded({extended:true}))
 app.use(session({
   name: 'sid',
-  secret: 'the quick brown fox jumps over the lazy dog',
+  secret: config.secret,
   resave: false,
   saveUninitialized: false,
   cookie: {
-    maxAge: 1000 * 60 * 60 * 2,
+    maxAge: config.calculateHours(1),
     sameSite: true,
     secure: false 
   }
